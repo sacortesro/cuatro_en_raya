@@ -19,7 +19,7 @@ Crear una base de datos vacia de nombre dabase.sqlite en el foder database. Revi
 
 
 ```bash
-    echo database/datasbase.sqlite
+    touch database/datasbase.sqlite
     php artisan migrate
     php artisan serve
 ```
