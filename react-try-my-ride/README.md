@@ -1,8 +1,9 @@
 
-# React Native login
+# React Native login y 4 en raya
 
 Este proyecto está dividido en dos partes, la primera consiste en 3 botones que permite realizar el registro e ingreso de usuarios mediante una api desarrollada en laravel, Así mismo se implementa una pantalla que en el futuro implementará la edición de dichos registros de usuario.
 
+Sobre el proyecto anterior se implementa un juego de 4 en raya, con un botón de reinicio.
 
 
 

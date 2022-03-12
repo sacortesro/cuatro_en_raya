@@ -18,7 +18,6 @@ const Register = ({ setRenderForm, setRenderGame }) => {
 
     const submitRegister = () => {
 
-
         if (userEmail == '') {
             setMessage('Por favor, ingrese un correo electrónico')
             return;
@@ -74,6 +73,7 @@ const Login = ({ setRenderForm, setRenderGame }) => {
 
     const submitLogin = () => {
 
+
         if (userEmail === '') {
             setMessage('Por favor, ingrese un correo electrónico')
             return;
@@ -122,7 +122,8 @@ const Edit = ({ setRenderForm, setRenderGame }) => {
     const [error, setError] = useState('');
 
     const submitEdit = () => {
-        console.log(userEmail.length)
+        
+        
         if (userEmail == '') {
             setError('Por favor, ingrese un correo electrónico')
             return;

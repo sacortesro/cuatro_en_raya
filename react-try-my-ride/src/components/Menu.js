@@ -5,16 +5,26 @@ import { StyleSheet, View, Text, TouchableOpacity } from 'react-native'
 import ButtonMenu from './Button';
 import { Register, Login, Edit } from './Form';
 
-const Menu = () => {
-  const [renderForm, setRenderForm] = useState(null); // 0 for Sign In, 1 for Signt Up, 2 for edit profile
-  const [renderGame, setRenderGame] = useState(false);
+const Menu = ({ setRenderGame, setRenderForm, renderForm }) => {
 
   return (
     <>
       <View style={styleMenu.menu_container}>
-        <ButtonMenu text='Iniciar sesión' callback={() => setRenderForm(0)} />
-        <ButtonMenu text='Registrar' callback={() => setRenderForm(1)} />
-        <ButtonMenu text='Editar perfil' callback={() => setRenderForm(2)} />
+        <ButtonMenu text='Iniciar sesión'
+          callback={() => {
+            setRenderGame(false);
+            setRenderForm(0);
+          }} />
+        <ButtonMenu text='Registrar'
+          callback={() => {
+            setRenderGame(false);
+            setRenderForm(1);
+          }} />
+        <ButtonMenu text='Editar perfil'
+          callback={() => {
+            setRenderGame(false);
+            setRenderForm(2);
+          }} />
       </View>
       <View style={styleMenu.form_container}>
         <View>
@@ -28,11 +38,6 @@ const Menu = () => {
           </TouchableOpacity>
         }
       </View>
-        <View style={{ alignItems: 'center' }} >
-          <TouchableOpacity style={[styleMenu.button, { width: 300 }]} onPress={() => setRenderGame(true)}>
-            <Text style={styleMenu.text}>Seguir como invitado</Text>
-          </TouchableOpacity>
-        </View >
     </>
   );
 }
