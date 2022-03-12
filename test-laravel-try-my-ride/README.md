@@ -8,7 +8,10 @@ Para correr el proyecto es necesario tener instalado PHP, laravel, laravel sanct
 
 Si no está instalado sqlite 
 ```bash
-  sudo apt install php-squlite3
+  sudo apt install php-sqlite3
+```
+Comandos para instalar el proyecto
+```bash
   composer install
   npm install
   cp .env.example .env
